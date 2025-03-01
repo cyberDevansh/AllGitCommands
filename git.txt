@@ -1,0 +1,136 @@
+📌 Git Bash Commands Cheat Sheet
+
+
+🖥️ Basic Bash Commands (File & Folder Management)
+
+
+Command	Description
+---------	-------------------------
+ls	List files and folders in the current directory
+cd <folder_name>	Change directory to a specific folder
+cd ..	Move up one directory
+cd	Go to the home directory
+pwd	Show the current directory path
+mkdir <folder_name>	Create a new folder
+rm <file_name>	Remove a file
+rm -r <file_or_folder_name>	Remove a folder (recursively)
+rm -ri <folder_name>	Remove a folder with confirmation
+rmdir <folder_name>	Remove an empty folder
+cp <file_or_folder_name>	Copy a file or folder
+mv <file_name>	Move or rename a file
+touch <file_name>	Create a new empty file
+clear	Clear the terminal
+
+
+🔧 Git Configuration (User Setup)
+Command	Description
+git config --global user.name "<your_username>"	Set global username
+git config --global user.email "<your_email>"	Set global email
+git config --local user.name "<your_username>"	Set local username for a specific repo
+git config --local user.email "<your_email>"	Set local email for a specific repo
+git config --user.name "<your_username>"	Set username (defaults to local)
+git config --user.email "<your_email>"	Set email (defaults to local)
+git config --list	Show all Git configurations
+git config --global --list	Show global configurations
+git config --local --list	Show local configurations
+git config --list --show-origin	Show where config settings are stored
+
+
+📂 Creating & Managing Repositories
+Command	Description
+git init	Initialize a new Git repository
+git clone <repo_url>	Clone a repository from GitHub
+git remote add origin <repo_url>	Link a local repo to a remote GitHub repository
+git remote -v	Verify remote repository URLs
+git push origin main	Push the main branch to GitHub
+git push -u origin main	Push and set tracking for future pushes
+🔀 Branch Management
+Command	Description
+git branch	List all local branches
+git branch -M <branch_name>	Rename a branch
+git checkout <branch_name>	Switch to a branch
+git checkout -b <branch_name>	Create and switch to a new branch
+git branch -d <branch_name>	Delete a branch
+git branch -D <branch_name>	Force delete a branch
+git branch <branch_name>	Create a new branch
+🔹 Newer Alternative Commands for Switching Branches:
+
+Command	Description
+git switch <branch_name>	Switch to a branch
+git switch -c <branch_name>	Create and switch to a new branch
+
+
+📤 Staging, Committing & Pushing Changes
+Command	Description
+git status	Check the current status of the repo
+git add <file_or_folder_name>	Stage a specific file or folder
+git add .	Stage all changes
+git commit -m "<commit_message>"	Commit staged changes with a message
+git push origin <branch_name>	Push changes to a specific branch
+
+
+🔄 Merging, Pulling & Syncing Changes
+Command	Description
+git merge <branch_name>	Merge a branch into the current branch
+git pull origin main	Fetch and merge changes from the remote main branch
+git merge pull origin branch1	Merge a branch from remote
+git branch -r --merged origin/main	Show remote branches that are already merged
+git branch -r --no-merged origin/main	Show remote branches that are not merged
+🛠️ Resetting & Restoring Changes
+Command	Description
+git reset .	Unstage all changes
+git reset <file_or_folder_name>	Unstage a specific file
+git reset --hard	Reset everything to the last committed state
+git restore --staged <file>	Remove a file from staging
+
+
+📜 Viewing History & Differences
+Command	Description
+git log	Show commit history
+git log --oneline --graph --all	View branch history graphically
+git diff <branch_name>	Show differences between the current branch and another branch
+git diff <branch1> <branch2>	Compare two branches
+
+
+🔄 Undoing Git Changes
+Command	Description
+rm -rf .git	Remove Git from a project (dangerous)
+rm -rf <file_or_folder_name>	Remove a file or folder
+
+
+📁 Opening Code in VS Code
+Command	Description
+code .	Open the current folder in VS Code
+code . --reuse-window	Open in the same VS Code window
+code --add ~/OneDrive/Documents/Second_repo_uploaded_from_vs	Add a repo to VS Code
+🔹 Shortcut for Cloning & Opening in VS Code:
+
+Command	Description
+git clone <repo_url> && code <same_repo_name>	Clone and open repo in VS Code
+
+
+📌 Quick Navigation in Bash
+Command	Description
+cd */	Go to the first folder inside the current directory
+cd foldername*	Go to a folder that starts with "foldername"
+cd ../..	Move up two levels in the directory tree
+cd -	Switch to the last used directory
+
+
+📝 Summary Table
+Category	Commands
+Basic Bash Commands	ls, cd, mkdir, rm, cp, mv, touch
+Git Configuration	git config --global, git config --list
+Repository Setup	git init, git clone, git remote
+Branch Management	git branch, git checkout, git switch
+Staging & Committing	git add, git commit, git push
+Merging & Syncing	git merge, git pull, git branch -r
+Resetting & Restoring	git reset, git restore
+Viewing History & Diff	git log, git diff
+VS Code Shortcuts	code ., git clone && code
+
+
+🚀 Final Notes
+Use git status often to check changes.
+Use git log --oneline --graph --all to visualize commits.
+Use git diff before committing to see what changed.
